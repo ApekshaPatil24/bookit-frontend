@@ -27,7 +27,7 @@ export default function BookingPage() {
 
   async function applyPromo() {
     try {
-      const res = await api.post("/bookings/promo/validate", {
+      const res = await api.post("https://bookit-backend-ouc2.onrender.com/api/bookings/promo/validate", {
         code: promoCode,
         amount: finalAmount,
       });
@@ -62,7 +62,8 @@ export default function BookingPage() {
 
     if (result.isConfirmed) {
       try {
-        const res = await api.post("/bookings", {
+        const res = await api.post("https://bookit-backend-ouc2.onrender.com/api/bookings",
+        {
           experienceId: experience.id,
           slotId,
           selectedDate,
