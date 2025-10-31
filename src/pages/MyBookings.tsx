@@ -9,7 +9,7 @@ export default function MyBookings() {
   useEffect(() => {
     async function fetchBookings() {
       try {
-        const res = await api.get("/bookings");
+        const res = await api.get("https://bookit-backend-ouc2.onrender.com/api/bookings");
         setBookings(res.data.bookings || []);
       } catch (error) {
         console.error("Failed to load bookings", error);

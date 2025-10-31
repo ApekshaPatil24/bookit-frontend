@@ -12,7 +12,7 @@ export default function Confirmation() {
   useEffect(() => {
     async function fetchBooking() {
       try {
-        const res = await api.get(`/bookings/${id}`);
+        const res = await api.get(`https://bookit-backend-ouc2.onrender.com/api/bookings/${id}`);
         setBooking(res.data.booking);
       } catch {
         setBooking(null);
