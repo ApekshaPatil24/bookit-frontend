@@ -21,10 +21,10 @@ export async function fetchExperiences(): Promise<Experience[]> {
   return data.map((exp: any) => ({
     id: exp.id,
     title: exp.title,
-    shortDesc: exp.description, // ✅ match expected prop
+    shortDesc: exp.description, //  match expected prop
     location: exp.location,
-    basePrice: exp.price, // ✅ match ExperienceCard
-    coverImage: exp.imageUrl, // ✅ match ExperienceCard
+    basePrice: exp.price, // match ExperienceCard
+    coverImage: exp.imageUrl, // match ExperienceCard
     tags: ["Adventure"], // optional placeholder (for now)
   }));
 }

@@ -41,7 +41,7 @@ export default function Navbar({ onSearch }: Props) {
             </Link>
           )}
 
-          {/* ✅ Changed About to React Router link */}
+          {/*  Changed About to React Router link */}
           <Link
             to="/about"
             className="hover:text-yellow-500 transition-colors duration-200"

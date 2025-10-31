@@ -1,6 +1,5 @@
 // src/components/SearchBar.tsx
 import { useState } from "react";
-import { Search } from "lucide-react";
 
 type Props = { onSearch?: (query: string) => void };
 

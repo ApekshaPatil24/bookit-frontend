@@ -33,18 +33,18 @@ export default function Confirmation() {
 
   if (!booking) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-red-50 to-white text-red-600 text-lg font-semibold">
-        Booking not found ❌
-      </div>
-    );
-  }
+        <div className="flex justify-center items-center h-screen bg-gradient-to-b from-red-50 to-white text-red-600 text-lg font-semibold">
+          Booking not found ❌
+        </div>
+      );
+    }
 
     return (
     <div className="h-screen bg-gradient-to-br from-green-50 via-white to-green-100 flex items-start justify-center pt-10">
       {/* Confirmation Card */}
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 sm:p-7 max-w-sm w-full text-center transition-all duration-300 hover:scale-[1.01]">
 
-        {/* ✅ Lottie Animation */}
+        {/*  Lottie Animation */}
         <div className="flex justify-center mb-3">
           <DotLottieReact
             src="https://lottie.host/b3ad5140-a3ac-4b15-9e5e-1f47a79ce521/xaPHhj47TK.lottie"
@@ -63,24 +63,24 @@ export default function Confirmation() {
 
         {/* Booking Info */}
         <div className="bg-green-50 rounded-lg p-4 mb-5 text-gray-700 text-xs md:text-sm grid grid-cols-2 gap-y-2">
-  {/* Left Column - Labels */}
-  <div className="text-left space-y-1 font-semibold text-gray-800">
-    <p>Ref ID:</p>
-    <p>Experience:</p>
-    <p>Date:</p>
-    <p>Time:</p>
-  </div>
+          {/* Left Column - Labels */}
+          <div className="text-left space-y-1 font-semibold text-gray-800">
+            <p>Ref ID:</p>
+            <p>Experience:</p>
+            <p>Date:</p>
+            <p>Time:</p>
+          </div>
 
-  {/* Right Column - Dynamic Data */}
-  <div className="text-right space-y-1">
-    <p className="font-mono text-green-700">
-      {booking?.id ? booking.id.slice(0, 8).toUpperCase() : "N/A"}
-    </p>
-    <p>{booking?.experience?.title || booking?.experienceTitle || "Not Available"}</p>
-    <p>{booking?.selectedDate || booking?.date || "N/A"}</p>
-    <p>{booking?.selectedTime || booking?.time || "N/A"}</p>
-  </div>
-</div>
+          {/* Right Column - Dynamic Data */}
+          <div className="text-right space-y-1">
+            <p className="font-mono text-green-700">
+              {booking?.id ? booking.id.slice(0, 8).toUpperCase() : "N/A"}
+            </p>
+            <p>{booking?.experience?.title || booking?.experienceTitle || "Not Available"}</p>
+            <p>{booking?.selectedDate || booking?.date || "N/A"}</p>
+            <p>{booking?.selectedTime || booking?.time || "N/A"}</p>
+          </div>
+        </div>
 
         {/* Buttons */}
         <div className="space-y-2">

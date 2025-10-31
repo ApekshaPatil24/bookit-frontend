@@ -103,7 +103,7 @@ export default function BookingPage() {
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         {/* LEFT SIDE — Intro + Checkout */}
         <div className="flex flex-col justify-start space-y-6">
-          {/* 🔸 Intro Section */}
+          {/*  Intro Section */}
           <section className="text-left flex items-center space-x-4">
             <DotLottieReact
               src="https://lottie.host/76b87528-a148-41be-892b-d0a5f00a02a3/G5zPCPbOi7.lottie"
@@ -114,8 +114,8 @@ export default function BookingPage() {
             <div>
               <h1 className="text-4xl sm:text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight">
                 <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-       Secure Your Booking ✨
-      </span>
+                  Secure Your Booking ✨
+                </span>
                 
               </h1>
               <p className="text-gray-600 text-xs leading-relaxed max-w-sm">
@@ -125,7 +125,7 @@ export default function BookingPage() {
             </div>
           </section>
 
-          {/* 🔸 Checkout Section */}
+          {/*  Checkout Section */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 hover:shadow-2xl transition-all duration-300">
             <h2 className="text-base font-semibold text-gray-800 mb-2">
               Checkout Details
@@ -178,68 +178,64 @@ export default function BookingPage() {
           </div>
         </div>
 
-   {/* RIGHT SIDE — Experience Summary */}
-<div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 
-                md:sticky md:top-[-40px] transform scale-95 md:scale-100 
-                w-[92%] mx-auto transition-all duration-300 -mt-6 md:-mt-10">
-  <h3 className="text-2xl pb-3 font-extrabold tracking-tight text-gray-900 leading-tight">
-    <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-      Experience Summary
-    </span>
-  </h3>
+        {/* RIGHT SIDE — Experience Summary */}
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:sticky md:top-[-40px] transform scale-95 md:scale-100 
+                          w-[92%] mx-auto transition-all duration-300 -mt-6 md:-mt-10">
+            <h3 className="text-2xl pb-3 font-extrabold tracking-tight text-gray-900 leading-tight">
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
+                Experience Summary
+              </span>
+            </h3>
 
-  <img
-    src={experience.coverImage || "/assets/placeholder.jpg"}
-    alt={experience.title}
-    className="w-full h-32 md:h-36 object-cover rounded-lg mb-4"
-  />
+            <img
+              src={experience.coverImage || "/assets/placeholder.jpg"} alt={experience.title}
+              className="w-full h-32 md:h-36 object-cover rounded-lg mb-4"
+            />
 
-  <div className="space-y-1 text-sm md:text-base text-gray-700">
-    <div className="flex justify-between">
-      <span>Experience</span>
-      <span className="font-medium truncate">{experience.title}</span>
-    </div>
-    <div className="flex justify-between">
-      <span>Date</span>
-      <span>{selectedDate}</span>
-    </div>
-    <div className="flex justify-between">
-      <span>Time</span>
-      <span>{selectedTime}</span>
-    </div>
-    <div className="flex justify-between">
-      <span>Qty</span>
-      <span>{quantity}</span>
-    </div>
+            <div className="space-y-1 text-sm md:text-base text-gray-700">
+              <div className="flex justify-between">
+                <span>Experience</span>
+                <span className="font-medium truncate">{experience.title}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Date</span>
+                <span>{selectedDate}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Time</span>
+                <span>{selectedTime}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Qty</span>
+                <span>{quantity}</span>
+              </div>
 
-    <hr className="my-2 border-gray-200" />
+              <hr className="my-2 border-gray-200" />
 
-    <div className="flex justify-between">
-      <span>Subtotal</span>
-      <span>₹{subtotal}</span>
-    </div>
-    <div className="flex justify-between">
-      <span>Taxes (6%)</span>
-      <span>₹{taxes}</span>
-    </div>
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>₹{subtotal}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Taxes (6%)</span>
+                <span>₹{taxes}</span>
+              </div>
 
-    <hr className="my-2 border-gray-200" />
+              <hr className="my-2 border-gray-200" />
 
-    <div className="flex justify-between font-semibold text-gray-900 text-base md:text-lg">
-      <span>Total</span>
-      <span>₹{finalAmount}</span>
-    </div>
-  </div>
+              <div className="flex justify-between font-semibold text-gray-900 text-base md:text-lg">
+                <span>Total</span>
+                <span>₹{finalAmount}</span>
+              </div>
+            </div>
 
-  <button
-    onClick={confirmBooking}
-    className="w-full cursor-pointer bg-gradient-to-r from-orange-100 to-orange-300 text-gray-900 font-semibold py-2.5 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm" >
-    PAY & CONFIRM
-  </button>
-</div>
-
-
-      </div>
+            <button
+              onClick={confirmBooking}
+              className="w-full cursor-pointer bg-gradient-to-r from-orange-100 to-orange-300 text-gray-900 font-semibold py-2.5 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-sm" >
+                PAY & CONFIRM
+            </button>
+          </div>
+        </div>
     </div>
   );
 }

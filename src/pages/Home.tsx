@@ -13,7 +13,7 @@ export default function Home({ searchQuery = "" }: Props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // ✅ Fetch data
+  // Fetch data
   useEffect(() => {
     let canceled = false;
     setLoading(true);
@@ -33,7 +33,7 @@ export default function Home({ searchQuery = "" }: Props) {
     };
   }, []);
 
-  // ✅ Filter experiences by search query
+  // Filter experiences by search query
   const filtered = useMemo(() => {
     if (!searchQuery) return items;
     const q = searchQuery.toLowerCase();
@@ -56,17 +56,17 @@ export default function Home({ searchQuery = "" }: Props) {
         <section className="relative text-center mb-16">
           <div className="relative z-10 max-w-4xl mx-auto px-4">
             <h1 className="flex items-center gap-3 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
-  <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-    Discover Unique Experiences
-  </span>
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
+                Discover Unique Experiences
+              </span>
 
-  <DotLottieReact
-    src="https://lottie.host/add2e715-57ac-4271-b790-63ef59798616/thfLGopblX.lottie"
-    loop
-    autoplay
-    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
-  />
-</h1>
+              <DotLottieReact
+                src="https://lottie.host/add2e715-57ac-4271-b790-63ef59798616/thfLGopblX.lottie"
+                loop
+                autoplay
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+              />
+            </h1>
 
             <p className="mt-4 text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
               Explore immersive adventures, cultural escapes, and extraordinary

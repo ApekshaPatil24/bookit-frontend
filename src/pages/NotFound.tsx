@@ -6,7 +6,7 @@ function NotFound() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Crisp Lottie Animation */}
+      {/*  Lottie Animation */}
       <DotLottieReact
         src="https://lottie.host/4299a5a7-d1f1-4be2-8588-49ee2746e2e7/832qLS59BE.lottie"
         autoplay

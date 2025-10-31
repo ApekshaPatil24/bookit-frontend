@@ -2,5 +2,5 @@
 import AppRoutes from "./routes/AppRoutes";
 
 export default function App() {
-  return <AppRoutes />; // ✅ no BrowserRouter here
+  return <AppRoutes />; // no BrowserRouter here
 }
