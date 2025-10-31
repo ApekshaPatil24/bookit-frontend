@@ -1,11 +1,11 @@
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import api from "../services/apiClient";
 import Swal from "sweetalert2";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function BookingPage() {
-  const { id } = useParams();
+
   const { state } = useLocation();
   const navigate = useNavigate();
 
