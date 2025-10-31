@@ -12,7 +12,7 @@ export type Experience = {
 
 
 export async function fetchExperiences(): Promise<Experience[]> {
-  const res = await fetch("http://localhost:5000/api/experiences");
+  const res = await fetch("https://bookit-backend-ouc2.onrender.com/api/experiences");
   if (!res.ok) throw new Error("Failed to fetch experiences");
 
   const data = await res.json();
