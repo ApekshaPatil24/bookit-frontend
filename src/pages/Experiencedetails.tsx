@@ -19,7 +19,7 @@ export default function ExperienceDetails() {
     if (!id) return;
     setLoading(true);
     api
-      .get(`/experiences/${id}`)
+      .get(`/${id}`)
       .then((res) => {
         const e = res.data;
         const normalized = {
